@@ -48,6 +48,7 @@ main()
 			putchar(c);
 			if (c == '/')
 			{
+				putchar('\n');
 				print_state = 0;
 			} else
 			{
