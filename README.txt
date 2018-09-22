@@ -32,3 +32,48 @@ Problem 2
 
 (b) ./hello6.c is_all_digits()
 Program still works after modified repeat_a_message() into for loop and is_all_digits() for while loop.
+
+	Sample Run
+	./hello6
+	Print what string? abcd
+	Repeat it how many times? ee
+	This is not a number: ee
+	Repeat it how many times? -5
+	This is not a number: -5
+	Repeat it how many times? 3
+	0. abcd
+	1. abcd
+	2. abcd
+
+
+
+Problem 3
+	Sample Run
+	./extract_comments < rmtags.c
+	/* 0 = NOPRINT, 1 = PRINT */
+	// Do not print char during no print state
+	// If the current char is =, change current state as print
+	// During print state, keep printing char
+	// Once it hits ;, new line, or tab, change current state to no print which will stop printing the char.
+
+
+
+Problem 4
+	Sample Run
+	./embedded_commas
+	Enter a number: 12
+	Number? 12
+	12
+	Enter a number 3456789
+	Number? 3456789
+	3,456,789
+	Enter a number: -87
+	Number? -87
+	-87
+	Enter a number: -9654321
+	Number? -9654321
+	-9,654,321
+	Enter a number: dd
+	Number? dd
+	dd
+	 is not a number.
