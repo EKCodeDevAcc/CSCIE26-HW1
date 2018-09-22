@@ -1,7 +1,13 @@
-Script started on Sat 22 Sep 2018 04:26:40 PM EDT
-edk926@ice1:~/26-hw1$ ./semi2tab2 < sched | ./rmtags | head -2
+Script started on Sat 22 Sep 2018 05:00:23 PM EDT
+edk926@ice1:~/26-hw1$ gcc -Wall -W -OI[K2 -o rmtags.c [K[K[K rmtags.c [K
+edk926@ice1:~/26-hw1$ [Kedk926@ice1:~/26-hw1$ [Kedk926@ice1:~/26-hw1$ ./semi2tab2 < sched | ./rmtags | head -2
 002	i	m-f	05:20	middleborough/ lakeville	middleborough
 002	i	m-f	05:30	bridgewater	middleborough
+edk926@ice1:~/26-hw1$ gcc -Wall -W -O2 -p[Ko hello6 hello65[K.c
+hello6.c: In function ‘get_a_positive_number’:
+hello6.c:60:8: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+hello6.c: In function ‘main’:
+hello6.c:23:7: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
 edk926@ice1:~/26-hw1$ ./hello6
 Print what string? abcd
 Repeat it how many times? ee
@@ -12,12 +18,16 @@ Repeat it how many times? 3
 0. abcd
 1. abcd
 2. abcd
+edk926@ice1:~/26-hw1$ gcc -Wall -W -O2 -o extract_comments.c [K[K[K extract_comments.c [K
 edk926@ice1:~/26-hw1$ ./extract_comments < rmtags.c
 /* 0 = NOPRINT, 1 = PRINT */
 // Do not print char during no print state
 // If the current char is =, change current state as print
 // During print state, keep printing char
 // Once it hits ;, new line, or tab, chage current state to no print which will stop printing the char.
+edk926@ice1:~/26-hw1$ gcc -Wall -W -O2 -o embedded_commas.c [K[K[K embedded_commas.c 
+embedded_commas.c: In function ‘main’:
+embedded_commas.c:17:7: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
 edk926@ice1:~/26-hw1$ ./embedded_commas [K
 Enter a number: 12
 Number? 12
@@ -39,6 +49,7 @@ Enter a number: dd
 Number? dd
 dd
  is not a number.
+edk926@ice1:~/26-hw1$ gcc -Wall -W -O2 -o badtime.c [K[K[K badtime.c 
 edk926@ice1:~/26-hw1$ ./badtime < sched
 TR=129;dir=o;day=m-f;TI=25:01;stn=manchester;Line=newburyport
 TR=129;dir=o;day=m-f;TI=25:07;stn=west gloucester;Line=newburyport
@@ -79,4 +90,4 @@ TR=839;dir=o;day=m-f;TI=25:10;stn=providence;Line=providence
 edk926@ice1:~/26-hw1$ exit
 exit
 
-Script done on Sat 22 Sep 2018 04:28:40 PM EDT
+Script done on Sat 22 Sep 2018 05:05:31 PM EDT
