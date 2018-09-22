@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+#  trainnumbers: print the number of trains stop at 
+#              a station going in certain day
+#   usage:  trainnumbers stationname day (m-f, sa, su)
+#   where: day is "m-f" or "sa" or "su"
+#
+#   this code is based on traintimes from the course.
+        # 1st - check there are two arguments or more
+	if test $# -lt 2
+	then
+		echo "usage: train-numbers station day"
+		exit 1
+	fi
+
+	STATION=$1
+	DAY=$2
+	grep "stn=$STATION" sched | grep "day=$DAY" | sort | uniq | wc -l

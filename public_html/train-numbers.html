@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- this version also asks for day (m-f, sa, or su) -->
+<!-- this code is based on train-times.html -->
+<html>
+<body>
+Find train times for a station
+<p>
+<form action="train-numbers.cgi" method="get">
+    <!-- Input box for station name  -->
+    Station: <input type="text" size="25" name="station"><br/>
+	<br/>
+
+   <!-- three radio buttons that limit the possible input for day field  -->
+    When (m-f, sa, or su): 
+	<input type='radio' name='day' value='m-f'>Weekday
+	<input type='radio' name='day' value='sa'>Saturday
+	<input type='radio' name='day' value='su'>Sunday
+	<br/>
+	
+    <input type="submit">
+</form>
+</body></html>
