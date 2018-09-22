@@ -51,35 +51,25 @@ int wrong_format(char string[])
 			}
 		} else if (current_state == EQUAL_STATE)
 		{	
-			if (string[i] != '0' && string[i] != '1' && string[i] != '2'){
+			if (string[i] != '0' && string[i] != '1' && string[i] != '2')
+			{
 				current_state = WAIT_STATE;
 				return 1;
-			} else {
-				current_state = WAIT_STATE;
-			}
-			/*
-			int	HR, MM;
-			HR == atoi(string[i])*10 + atoi(string[i+1]);
-			MM == atoi(string[i+3])*10 + atoi(string[i+4]);
-			if (HR < 0 || HR > 25)
-			{
-				putchar('a');
+			} else if (string[i] == '2' && string[i+1] != '0' && string[i+1] != '1' && string[i+1] != '2' && string[i+1] != '3' && string[i+1] != '4')
+			{			
 				current_state = WAIT_STATE;
 				return 1;
 			} else if (string[i+2] != ':')
 			{
 				current_state = WAIT_STATE;
 				return 1;
-			} else if (MM < 0 || MM > 59)
-			{
-				current_state = WAIT_STATE;
+			} else if (string[i+3] != '0' && string[i+3] != '1' && string[i+3] != '2' && string[i+3] != '3' && string[i+3] != '4' && string[i+3] != '5')
+			{	current_state = WAIT_STATE;
 				return 1;
 			} else {
 				current_state = WAIT_STATE;
 			}
-			*/
 		}		
-		//putchar(string[i]);
 	}
 	return 0;
 }
