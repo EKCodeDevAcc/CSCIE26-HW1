@@ -1,0 +1,82 @@
+Script started on Sat 22 Sep 2018 04:26:40 PM EDT
+edk926@ice1:~/26-hw1$ ./semi2tab2 < sched | ./rmtags | head -2
+002	i	m-f	05:20	middleborough/ lakeville	middleborough
+002	i	m-f	05:30	bridgewater	middleborough
+edk926@ice1:~/26-hw1$ ./hello6
+Print what string? abcd
+Repeat it how many times? ee
+This is not a number: ee
+Repeat it how many times? -5
+This is not a number: -5
+Repeat it how many times? 3
+0. abcd
+1. abcd
+2. abcd
+edk926@ice1:~/26-hw1$ ./extract_comments < rmtags.c
+/* 0 = NOPRINT, 1 = PRINT */
+// Do not print char during no print state
+// If the current char is =, change current state as print
+// During print state, keep printing char
+// Once it hits ;, new line, or tab, chage current state to no print which will stop printing the char.
+edk926@ice1:~/26-hw1$ ./embedded_commas [K
+Enter a number: 12
+Number? 12
+12
+edk926@ice1:~/26-hw1$ ./embedded_commas
+Enter a number: 3456789
+Number? 3456789
+3,456,789
+edk926@ice1:~/26-hw1$ ./embedded_commas
+Enter a number: -87
+Number? -87
+-87
+edk926@ice1:~/26-hw1$ ./embedded_commas
+Enter a number: -9654321
+Number? -9654321
+-9,654,321
+edk926@ice1:~/26-hw1$ ./embedded_commas
+Enter a number: dd
+Number? dd
+dd
+ is not a number.
+edk926@ice1:~/26-hw1$ ./badtime < sched
+TR=129;dir=o;day=m-f;TI=25:01;stn=manchester;Line=newburyport
+TR=129;dir=o;day=m-f;TI=25:07;stn=west gloucester;Line=newburyport
+TR=129;dir=o;day=m-f;TI=25:14;stn=gloucester;Line=newburyport
+TR=129;dir=o;day=m-f;TI=25:22;stn=rockport;Line=newburyport
+TR=183;dir=o;day=m-f;TI=25:05;stn=ipswich;Line=newburyport
+TR=183;dir=o;day=m-f;TI=25:10;stn=rowley;Line=newburyport
+TR=183;dir=o;day=m-f;TI=25:18;stn=newburyport;Line=newburyport
+TR=229;dir=o;day=m-f;TI=25:00;stn=andover;Line=haverhill
+TR=229;dir=o;day=m-f;TI=25:07;stn=lawrence;Line=haverhill
+TR=229;dir=o;day=m-f;TI=25:16;stn=bradford;Line=haverhill
+TR=229;dir=o;day=m-f;TI=25:18;stn=haverhill;Line=haverhill
+TR=314;dir=i;day=m-f;TI=99:13;stn=winchester center;Line=lowell
+TR=316;dir=I;day=m-f;TI=09:43;stn=winchester center;Line=lowell
+TR=329;dir=o;day=m-f;TI=:24;stn=north billerica;Line=lowell
+TR=401;dir=o;day=m-f;TI=O7:31;stn=north leominster;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:05;stn=littleton / rte 495;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:13;stn=ayer;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:18;stn=shirley;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:27;stn=north leominster;Line=fitchburg
+TR=433;dir=o;day=m-f;TI=25:34;stn=fitchburg;Line=fitchburg
+TR=538;dir=i;day=m-f;TI=25:01;stn=framingham;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:06;stn=west natick;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:11;stn=natick center;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:15;stn=wellesley square;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:19;stn=wellesley hills;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:22;stn=wellesley farms;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:27;stn=auburndale;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:30;stn=west newton;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:33;stn=newtonville;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:41;stn=yawkey;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:46;stn=back bay;Line=worcester
+TR=538;dir=i;day=m-f;TI=25:51;stn=south station;Line=worcester
+TR=539;dir=o;day=m-f;TI=25:00;stn=worcester;Line=worcester
+TR=776;dir=i;day=m-f;TI=17;48;stn=fairmount;Line=fairmount
+TR=839;dir=o;day=m-f;TI=25:00;stn=south attleboro;Line=providence
+TR=839;dir=o;day=m-f;TI=25:10;stn=providence;Line=providence
+edk926@ice1:~/26-hw1$ exit
+exit
+
+Script done on Sat 22 Sep 2018 04:28:40 PM EDT
